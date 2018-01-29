@@ -32,11 +32,16 @@ public class MainActivity extends AppCompatActivity {
                 EditText russianCostEditText =(EditText) findViewById(R.id.russianCostEditText);
                 TextView audResultTextView = (TextView) findViewById(R.id.audResultTextView);
 
-                double russianP = Float.parseFloat(russianCostEditText.getText().toString());
-                double rateRtoA = 45.19;
-                double result = russianP/rateRtoA;
-                String resultAsString = String.format("%.2f", result);
-                audResultTextView.setText("AUD$ " + resultAsString);
+                if (russianCostEditText.getText().length() > 0) {
+
+                    double russianP = Float.parseFloat(russianCostEditText.getText().toString());
+                    double rateRtoA = 45.19;
+                    double result = russianP / rateRtoA;
+                    String resultAsString = String.format("%.2f", result);
+                    audResultTextView.setText("AUD$ " + resultAsString);
+                } else {
+                    audResultTextView.setText("ERROR Enter Rub");
+                }
 
 
             }
