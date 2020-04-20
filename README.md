@@ -1,3 +1,3 @@
 # Russian
-Russian Rubles to AUD$ converter
-Static conversion rate at this stage.
+Simple Russian Rubles to AUD$ converter. with a static conversion rate at this stage
+
